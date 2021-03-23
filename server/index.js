@@ -1,4 +1,4 @@
-const express = require("express");
+ const express = require("express");
 const axios = require ('axios');
 const PORT = process.env.PORT || 3001;
 const handlers = require('../common/handler');
@@ -20,10 +20,12 @@ app.get("/wikiProxy", (req, res) => {
        });
 });
 
-app.get("/", (req, res) => {
-  res.json({ message: "Address not found" });
-});
-
+ app.use((req, res) => {
+   res.status(404).send({
+     status: 404,
+     message: "Address not found"
+ });
+ });
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
