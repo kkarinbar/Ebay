@@ -1,6 +1,6 @@
 # Ebay
 
-cd ebay
+cd ebay-main
 npm install
 npm run startServer
 cd vclient/client/ 
