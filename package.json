@@ -1,0 +1,16 @@
+{
+  "name": "ebay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "startClient": "cd vclient/client && npm run serve",
+    "startServer": "node server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
